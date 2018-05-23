@@ -96,7 +96,14 @@
     
 ## ERROR HANDLING
     Above code has been tested for various user-inputs and it is handling almost all error handling.
-    For e.g. 1. Wrong field while posting user information.
-             2. Missing field while posting user information.
-             3. Unique id while posting user information.
+    For e.g. 
+             1. Wrong field check while posting user information.
+             2. Missing field check while posting user information.
+             3. Unique id check while posting user information.
              4. Wrong user id while retriving user information.
+             5. Wrong id check while updating user information.
+             6. Wrong field while updating/modifying user information.
+             7. Wrong id while deleting user information for dynamodb table.
+             8. Wrong user id while retriving user information.
+             9. Wrong **method** or **pathParameters** while usig above code.
+          
