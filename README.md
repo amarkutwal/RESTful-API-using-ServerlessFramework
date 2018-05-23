@@ -17,3 +17,40 @@
  1.  Deploy your code using serverless framework using below command *also make sure you will run command where you have your serverless.yml file.*
  
      **sls deploy**
+
+
+## Somethings about Serverless
+   
+   1. **Stack Name** 
+        service: TTdevelopement
+        
+   2. **Lambda Function Example**
+        functions:
+          postuser:                                          #name of Lambda function
+            handler: src/function/postuser/handler.handler   #source code file
+            events:                                          #API Gateway event
+              - http:               
+                  path: person                               #Resource path and method
+                  method: post
+
+
+3. **Dynamodb table creation using resource**
+     resources:
+      Resources:
+        usertable:
+          Type: AWS::DynamoDB::Table
+          Properties:
+            TableName: userinformation
+            AttributeDefinitions:
+              - AttributeName: id
+                AttributeType: S
+            KeySchema:
+              - AttributeName: id
+                KeyType: HASH
+            ProvisionedThroughput:
+              ReadCapacityUnits: 1
+              WriteCapacityUnits: 1
+            StreamSpecification:
+              StreamViewType: NEW_AND_OLD_IMAGES
+              
+## Input and expected Output
