@@ -22,7 +22,7 @@ provider:
   runtime: python3.6
 
 custom:
-  rolearn: arn:aws:iam::129429433764:role/TTdevelopement-dev-us-east-1-lambdaRole
+  rolearn: arn:aws:iam::xxxxxxxxxxx:role/TTdevelopement-dev-us-east-1-lambdaRole
 
 
 # you can overwrite defaults here
