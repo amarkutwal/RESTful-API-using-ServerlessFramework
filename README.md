@@ -8,7 +8,7 @@
       **npm install serverless -g**
     
 2. Configure AWS credentials - through which we are going to deploy the architecture in AWS.
-    *Note - A aws user you are using for deployment should have proper roles assign to it to access AWS services such as Lambda, API Gateway, Dynamodb and S3.
+    *Note - A aws user you are using for deployment should have proper roles assign to it to access AWS services such as Lambda, API Gateway, Dynamodb, CloudFormation, IAM and S3.
     
     **sls config credentials --provider aws --key {Access key ID} --secret {Secret access key}**
    
