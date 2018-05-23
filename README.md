@@ -27,18 +27,18 @@
         ```
    2. **Lambda Function Example**
         ```   
-        functions:                                                          
+      functions:                                                          
         postuser:                                            #name of Lambda function
-            handler: src/function/postuser/handler.handler   #source code file
-            events:                                          #API Gateway event
-              - http:                                        
-                  path: person                               #Resource path and method
-                  method: post
+          handler: src/function/postuser/handler.handler   #source code file
+          events:                                          #API Gateway event
+            - http:                                        
+                path: person                               #Resource path and method
+                method: post
         ```
 
 3. **Dynamodb table creation using resource**
      ```
-     resources:
+    resources:
       Resources:
         usertable:
           Type: AWS::DynamoDB::Table
