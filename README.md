@@ -92,7 +92,8 @@
     
     ```
     curl -X DELETE https://{apigatewayendpoint}/dev/person/ids/1
-    
+
+
 ## ERROR HANDLING
     Above code has been tested for various user-inputs and it is handling almost all user errors.
     For e.g. 
