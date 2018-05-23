@@ -27,7 +27,7 @@
         ```
    2. **Lambda Function Example**
         ```   
-      functions:                                                          
+                                                         
          postuser:                                            #name of Lambda function
            handler: src/function/postuser/handler.handler   #source code file
            events:                                          #API Gateway event
@@ -38,7 +38,7 @@
 
 3. **Dynamodb table creation using resource**
      ```
-    resources:
+
       Resources:
         usertable:
           Type: AWS::DynamoDB::Table
