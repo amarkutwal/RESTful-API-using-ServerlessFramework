@@ -17,7 +17,7 @@ def parse_the_input(event):
     # Validate inputs
     path_params = event["pathParameters"]
     if "id" not in path_params:
-        return response_msg(False, "URL path-param 'id' not specified.")
+        return response_msg(False, json.dumps("URL path-param 'id' not specified."))
 
     id = path_params["id"]
     #print("Event body here", event['body'])
