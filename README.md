@@ -21,10 +21,12 @@
 
 ## Somethings about Serverless
    
-   1. **Stack Name** 
+   1. **Stack Name**
+   
         service: TTdevelopement
         
    2. **Lambda Function Example**
+   
         functions:
           postuser:                                          #name of Lambda function
             handler: src/function/postuser/handler.handler   #source code file
