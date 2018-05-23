@@ -53,4 +53,4 @@
             StreamSpecification:
               StreamViewType: NEW_AND_OLD_IMAGES
               
-## Input and expected Output
+## Input
