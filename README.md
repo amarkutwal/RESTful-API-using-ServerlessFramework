@@ -64,7 +64,7 @@
 ## Input
  1. POST USER
  
-    '''
+    ```
     curl -X POST https://{apigatewayendpoint}/dev/person -d '{
     "id":"1",
     "first_name": "John",
