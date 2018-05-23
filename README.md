@@ -22,22 +22,22 @@
 ## Somethings about Serverless
    
    1. **Stack Name**
-   
+        ```
         service: TTdevelopement <br />
-        
+        ```
    2. **Lambda Function Example**
-   
-        functions:                                           <br />               
-        postuser:                                            #name of Lambda function <br />
-            handler: src/function/postuser/handler.handler   #source code file  <br />
-            events:                                          #API Gateway event <br />
-              - http:                                        <br />
-                  path: person                               #Resource path and method <br />
+        ```   
+        functions:                                                          
+        postuser:                                            #name of Lambda function
+            handler: src/function/postuser/handler.handler   #source code file
+            events:                                          #API Gateway event
+              - http:                                        
+                  path: person                               #Resource path and method
                   method: post
-
+        ```
 
 3. **Dynamodb table creation using resource**
-
+     ```
      resources:
       Resources:
         usertable:
@@ -55,5 +55,6 @@
               WriteCapacityUnits: 1
             StreamSpecification:
               StreamViewType: NEW_AND_OLD_IMAGES
-              
+       ```        
 ## Input
+
