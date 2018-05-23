@@ -1,4 +1,4 @@
-# A simple RESTful API which provides a service for storing, updating, retrieving and deleting Person entities in Dynamodb using AWS Lambda and API Gateway. Deploy the architecture using ServerlessFramework.
+# A simple RESTful API which provides a service for storing, updating, retrieving and deleting Person entities in Dynamodb using AWS Lambda, API Gateway and ServerlessFramework.
 
 ## Prerequisite 
 
