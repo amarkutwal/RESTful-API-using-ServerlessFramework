@@ -43,7 +43,6 @@
      AWS infrastructure resources which the AWS Lambda functions in your Service depend on, like AWS DynamoDB or AWS S3.
      Using the Serverless Framework, you can define the infrastructure resources you need in serverless.yml, and easily deploy them.
      ```
-
       Resources:
         usertable:
           Type: AWS::DynamoDB::Table
@@ -95,9 +94,9 @@
     curl -X DELETE https://{apigatewayendpoint}/dev/person/ids/1
     
 ## ERROR HANDLING
-    Above code has been tested for various user-inputs and it is handling almost all error handling.
+    Above code has been tested for various user-inputs and it is handling almost all user errors.
     For e.g. 
-             1. Wrong field check while posting user information.
+             1. Wrong field while posting user information.
              2. Missing field check while posting user information.
              3. Unique id check while posting user information.
              4. Wrong user id while retriving user information.
