@@ -23,7 +23,7 @@
    
    1. **Stack Name**
         ```
-        service: TTdevelopement <br />
+        service: TTdevelopement
         ```
    2. **Lambda Function Example**
         ```   
@@ -37,6 +37,8 @@
        
 
 3. **Dynamodb table creation using resource**
+     AWS infrastructure resources which the AWS Lambda functions in your Service depend on, like AWS DynamoDB or AWS S3.
+     Using the Serverless Framework, you can define the infrastructure resources you need in serverless.yml, and easily deploy them.
      ```
 
       Resources:
@@ -55,6 +57,6 @@
               WriteCapacityUnits: 1
             StreamSpecification:
               StreamViewType: NEW_AND_OLD_IMAGES
-                
+               
 ## Input
 
