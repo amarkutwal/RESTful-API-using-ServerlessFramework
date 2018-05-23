@@ -4,7 +4,7 @@ import json, boto3
 dynamodb = boto3.resource('dynamodb' , region_name='us-east-1')
 table = dynamodb.Table('userinformation')
 
-def lambda_handler(event, context=None):
+def handler(event, context=None):
     response = create_schema(event)
     return response
 
@@ -40,11 +40,11 @@ def create_schema(event):
         id, fname, lname, color = parse_input(event)
         if(not does_id_exist(id)):
             insert_new_entry_in_db(id, fname, lname, color)
-            return response_msg(True, "New entry added to db!!")
+            return response_msg(True, json.dumps("New entry added to db!!"))
         else:
-            return response_msg(False, "Id is not unique!!")
+            return response_msg(False, json.dumps("Id is not unique!!"))
     else:
-         return response_msg(False, "Input does not contains require fields, please check the input and try again!!")
+         return response_msg(False, json.dumps("Input does not contains require fields, please check the input and try again!!"))
 
 
 
