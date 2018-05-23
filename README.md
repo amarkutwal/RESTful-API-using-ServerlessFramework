@@ -27,7 +27,7 @@
         ```
    2. **Lambda Function Example**
         ```   
-      functions:                                                          
+     functions:                                                          
         postuser:                                            #name of Lambda function
           handler: src/function/postuser/handler.handler   #source code file
           events:                                          #API Gateway event
