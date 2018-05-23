@@ -55,6 +55,6 @@
               WriteCapacityUnits: 1
             StreamSpecification:
               StreamViewType: NEW_AND_OLD_IMAGES
-        ```        
+                
 ## Input
 
