@@ -8,9 +8,11 @@
       **npm install serverless -g**
     
 2. Configure AWS credentials - through which we are going to deploy the architecture in AWS.
-    *Note - A aws user you are using for deployment should have proper roles assign to it to access AWS services such as Lambda, API Gateway, Dynamodb, CloudFormation, IAM and S3.
+    *Note - A aws user you are using for deployment should have proper roles assign to it to access AWS services such as Lambda, API                 Gateway, Dynamodb, CloudFormation, IAM and S3.
     
     **sls config credentials --provider aws --key {Access key ID} --secret {Secret access key}**
+
+3. The **rolearn** you are using in serverless.yml should have right permission/role assigned to (post/create, get, update, delete)        entry in Dynamodb table.
    
 
 ## Deploy
@@ -22,12 +24,13 @@
 ## Somethings about Serverless
    
    1. **Stack Name**
+   
         ```
         service: TTdevelopement
         ```
    2. **Lambda Function Example**
-        ```   
-                                                         
+   
+        ```                                              
          postuser:                                            #name of Lambda function
            handler: src/function/postuser/handler.handler   #source code file
            events:                                          #API Gateway event
@@ -72,12 +75,12 @@
  
  2. GET USER
  
-    '''
+    ```
     curl -X GET https://{apigatewayendpoint}/dev/person/ids/1
 
  3. UPDATE User Information
 
-    '''
+    ```
     curl -X PUT https://{apigatewayendpoint}/dev/person/ids/1 -d '{
     "fields": {
     "last_name":"Collyer"
@@ -86,5 +89,5 @@
     
  4. DELETE USER info/entry from table
     
-    '''
+    ```
     curl -X DELETE https://{apigatewayendpoint}/dev/person/ids/1
