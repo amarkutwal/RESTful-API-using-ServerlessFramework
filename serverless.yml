@@ -88,7 +88,7 @@ functions:
           method: delete
 
   proxyresponse:
-    handler: src/functions/proxyresponse/handler.handler
+    handler: src/function/proxyresponse/handler.handler
     events:
       - http:
           path: /{proxy+}
