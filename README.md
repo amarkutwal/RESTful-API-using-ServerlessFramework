@@ -63,7 +63,9 @@
                
 ## Input
  1. POST USER
- 
+    While posting user information make sure you use unique id while posting new user entry to dynamodb.
+    first_name, last_name, age, favourite_colour are mandatory fields while posting user information.
+    
     ```
     curl -X POST https://{apigatewayendpoint}/dev/person -d '{
     "id":"1",
@@ -91,3 +93,10 @@
     
     ```
     curl -X DELETE https://{apigatewayendpoint}/dev/person/ids/1
+    
+## ERROR HANDLING
+    Above code has been tested for various user-inputs and it is handling almost all error handling.
+    For e.g. 1. Wrong field while posting user information.
+             2. Missing field while posting user information.
+             3. Unique id while posting user information.
+             4. Wrong user id while retriving user information.
