@@ -21,6 +21,10 @@ provider:
   name: aws
   runtime: python3.6
 
+custom:
+  rolearn: arn:aws:iam::129429433764:role/TTdevelopement-dev-us-east-1-lambdaRole
+
+
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
