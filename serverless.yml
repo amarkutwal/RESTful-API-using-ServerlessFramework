@@ -20,9 +20,10 @@ service: TTdevelopement # NOTE: update this with your service name
 provider:
   name: aws
   runtime: python3.6
+  #role: ${rolearn}
 
-custom:
-  rolearn: arn:aws:iam::xxxxxxxxxxx:role/TTdevelopement-dev-us-east-1-lambdaRole
+#custom:
+  #rolearn: arn:aws:iam::xxxxxxxxxxx:role/TTdevelopement-dev-us-east-1-lambdaRole
 
 
 # you can overwrite defaults here
