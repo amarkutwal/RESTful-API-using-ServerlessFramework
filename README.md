@@ -9,12 +9,13 @@
     
 2. Configure AWS credentials - through which we are going to deploy the architecture in AWS.
 
-    *Note - A aws user you are using for deployment should have proper roles assign to it to deploy AWS services such as Lambda, API                 Gateway, Dynamodb, IAM and S3 using CLoudFormation stack. A CloudFormation role to create/setup the AWS resources/services               using cloudformation stack.*
+    ***Note - A aws user you are using for deployment should have proper roles assign to it to deploy AWS services such as Lambda, API                 Gateway, Dynamodb, IAM and S3 using CLoudFormation stack. A CloudFormation role to create/setup the AWS resources/services               using cloudformation stack.***
     
     **sls config credentials --provider aws --key {Access key ID} --secret {Secret access key}**
 
 3. The **rolearn** you are using in serverless.yml should have right permission/role assigned to (post/create, get, update, delete)        entry in Dynamodb table. This role is going to be get assigned to Lambda function we are going to deploy using CloudFormation.
-    *Note - While using current serverless.yml file make sure you will put the valid rolearn into it. Currently it is having an dummy             rolearn statement present in it.* 
+
+    ***Note - While using current serverless.yml file make sure you will put the valid rolearn into it. Currently it is having an dummy             rolearn statement present in it.*** 
    
 
 ## Deploy
