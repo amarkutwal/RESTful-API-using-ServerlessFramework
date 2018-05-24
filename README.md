@@ -22,7 +22,7 @@
  1.  Deploy your code using serverless framework using below command *also make sure you will run command where you have your serverless.yml file.*
  
      **sls deploy**
-
+ 
 
 ## Somethings about Serverless
    
