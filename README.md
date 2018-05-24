@@ -14,6 +14,7 @@
     **sls config credentials --provider aws --key {Access key ID} --secret {Secret access key}**
 
 3. The **rolearn** you are using in serverless.yml should have right permission/role assigned to (post/create, get, update, delete)        entry in Dynamodb table. This role is going to be get assigned to Lambda function we are going to deploy using CloudFormation.
+    *Note - While using current serverless.yml file make sure you will put the valid rolearn into it. Currently it is having an dummy             rolearn statement present in it.* 
    
 
 ## Deploy
@@ -64,7 +65,7 @@
 ## Input
  1. POST USER
     While posting user information make sure you use unique id while posting new user entry to dynamodb.
-    first_name, last_name, age, favourite_colour are mandatory fields while posting user information.
+    first_name, last_name, age and favourite_colour are mandatory fields while posting user information.
     
     ```
     curl -X POST https://{apigatewayendpoint}/dev/person -d '{
@@ -85,7 +86,7 @@
     ```
     curl -X PUT https://{apigatewayendpoint}/dev/person/ids/1 -d '{
     "fields": {
-    "last_name":"Collyer"
+    "last_name":"Taylor"
     }
     }'
     
@@ -97,7 +98,7 @@
 
 ## ERROR HANDLING
     Above code has been tested for various user-inputs and it is handling almost all user errors.
-    For e.g. 
+    For eample
              1. Wrong field while posting user information.
              2. Missing field check while posting user information.
              3. Unique id check while posting user information.
