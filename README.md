@@ -15,7 +15,7 @@
 
 3. The **rolearn** you are using in serverless.yml should have right permission/role assigned to (post/create, get, update, delete)        entry in Dynamodb table. This role is going to be get assigned to Lambda function we are going to deploy using CloudFormation.
 
-    ***Note - While using current serverless.yml file make sure you will put the valid rolearn into it. Currently it is having an dummy               and commented role and rolearn statement present in it. If you do not edit it and use this serverless file as it the                     serverless will create a default role for your lambda; but that role will not have a policy attached to it for                           adding/posting data in dynamodb. You have to manually assign policy to that role to perform post, get and to delete data                 in dynamodb. *** 
+    ***Note - While using current serverless.yml file make sure you will put the valid rolearn into it. Currently it is having an dummy               and commented role and rolearn statement present in it. If you do not edit it and use this serverless file as it the                     serverless will create a default role for your lambda; but that role will not have a policy attached to it for                           adding/posting data in dynamodb. You have to manually assign policy to that role to perform post, get and to delete data                 in dynamodb.*** 
    
 
 ## Deploy
